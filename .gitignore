@@ -1,0 +1,7 @@
+# IDE folders
+.vscode
+.idea
+
+# Binaries
+bin
+obj
