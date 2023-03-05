@@ -3,10 +3,13 @@
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <RootNamespace>Homework2.Task1</RootNamespace>
+        <OutputType>EXE</OutputType>
     </PropertyGroup>
 
     <ItemGroup>
         <Compile Include="EvenCounters.fs" />
+        <Compile Include="Tree.fs" />
+        <Compile Include="Evaluator.fs" />
     </ItemGroup>
 
 </Project>

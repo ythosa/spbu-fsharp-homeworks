@@ -1,39 +1,43 @@
 module OperatorExecutor
 
-type BinaryOperator =
+type InfixOperator =
     | Plus
     | Minus
     | Multiply
     | Divide
 
-type UnaryOperator =
-    | UnaryMinus
-    | UnaryPlus
+let getInfixOperation operator =
+    match operator with
+    | Plus -> (+)
+    | Minus -> (-)
+    | Multiply -> (*)
+    | Divide -> (/)
 
-type Expression<'a> =
-    | Value of 'a
-    | BinaryExpr of BinaryOperator * Expression<'a> * Expression<'a>
-    | UnaryExpr of UnaryOperator * Expression<'a>
+type PrefixOperator =
+    | Minus
+    | Plus
+
+let getPrefixOperation operator =
+    match operator with
+    | Minus -> (~-)
+    | Plus -> (~+)
+
+type PrefixExpression<'a> =
+    { Operator: PrefixOperator
+      Right: Expression<'a> }
+
+and InfixExpression<'a> =
+    { Operator: InfixOperator
+      Left: Expression<'a>
+      Right: Expression<'a> }
+
+and Expression<'a> =
+    | Literal of 'a
+    | InfixExpr of InfixExpression<'a>
+    | PrefixExpr of PrefixExpression<'a>
 
 let rec eval expression =
-    let getBinaryOperationByOperator op =
-        match op with
-        | Plus -> (+)
-        | Minus -> (-)
-        | Multiply -> (*)
-        | Divide -> (/)
-
-    let getUnaryOperationByOperator op =
-        match op with
-        | UnaryMinus -> (~-)
-        | UnaryPlus -> (~+)
-
     match expression with
-    | Value v -> v
-    | BinaryExpr (op, l, r) -> op |> getBinaryOperationByOperator <| eval l <| eval r
-    | UnaryExpr (op, e) -> op |> getUnaryOperationByOperator <| eval e
-
-let exp =
-    BinaryExpr(Multiply, BinaryExpr(Plus, Value(1), UnaryExpr(UnaryMinus, Value(2))), UnaryExpr(UnaryPlus, Value(3)))
-
-printf "%d" <| (eval <| exp)
+    | Literal v -> v
+    | InfixExpr { Operator = op; Left = l; Right = r } -> op |> getInfixOperation <| eval l <| eval r
+    | PrefixExpr { Operator = op; Right = r } -> op |> getPrefixOperation <| eval r
