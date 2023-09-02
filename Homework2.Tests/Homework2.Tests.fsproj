@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+        <GenerateProgramFile>false</GenerateProgramFile>
+        <RootNamespace>Homework2.Task1.Tests</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="EvenCounters.fs" />
+        <Compile Include="Tree.fs" />
+        <Compile Include="Evaluator.fs" />
+        <Compile Include="PrimeSeq.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FsCheck" Version="2.16.5" />
+        <PackageReference Include="FsUnit" Version="5.2.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+        <PackageReference Include="NUnit" Version="3.13.3" />
+        <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+        <PackageReference Include="NUnit.Analyzers" Version="3.3.0" />
+        <PackageReference Include="coverlet.collector" Version="3.1.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Homework2\Homework2.fsproj" />
+    </ItemGroup>
+
+</Project>
