@@ -10,6 +10,7 @@
         <Compile Include="EvenCounters.fs" />
         <Compile Include="Tree.fs" />
         <Compile Include="Evaluator.fs" />
+        <Compile Include="PrimeSeq.fs" />
     </ItemGroup>
 
 </Project>
