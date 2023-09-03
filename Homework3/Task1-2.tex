@@ -1,0 +1,45 @@
+\documentclass[16pt]{article}
+\usepackage[russian]{babel}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Нетипизированное $\lambda$ исчисление}
+\author{Бабин Руслан}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Привести к нормальной форме $\lambda$ -терм}
+Исходный $\lambda$ - терм:
+\begin{equation*}
+    ((\lambda a.\:(\lambda b.b\;b)\:(\lambda b. b\;b) b))\:((\lambda c.(c\;b))\:(\lambda a.a)) 
+\end{equation*}
+Применим нормальную стратегию:
+\begin{align*}
+    & ((\lambda a.\:(\lambda b.b\;b)\:(\lambda b. b\;b) b))\:((\lambda c.(c\;b))\:(\lambda a.a)) \to_\beta \\ 
+    & ((\lambda a.\:(\lambda b.b\;b)\:(\lambda b. b\;b)[a := b]))\:((\lambda c.(c\;b))\:(\lambda a.a)) = \\
+    & ((\lambda b.b\;b)\:(\lambda b. b\;b))\:((\lambda c.(c\;b))\:(\lambda a.a)) \to_\beta \\
+    & ((\lambda b.b\;b)[b := \lambda b.b\;b])\:((\lambda c.(c\;b))\:(\lambda a.a)) = \\
+    & ((\lambda b.b\;b)\:(\lambda b. b\;b))\:((\lambda c.(c\;b))\:(\lambda a.a)) 
+\end{align*}
+Из теоремы Карри о нормализации следует, что нормальной формы у данного $\lambda$-терма нет
+
+\section{Доказать, что $S\ K\ K = I$}
+\begin{align*}
+    & S\ K\ K \equiv \\
+    & (\lambda x y z.x\;z\;(y\;z))\;K\;K \to_\beta \\
+    & (\lambda y z.K\;z\;(y \;z)) \ K \equiv \\
+    & (\lambda y z.(\lambda x y.x)\;z\;((\lambda x y.x))\;z) \to_\beta \\
+    & (\lambda y z.(\lambda x y.x)[x := z]\;(\lambda x y.x)[x := z]) = \\
+    & (\lambda y z.(\lambda y.z)(\lambda y.z)) \to_\beta \\
+    & (\lambda y z.(\lambda y.z)[y = \lambda y.z]) = \\
+    & (\lambda y z.\lambda y.z) \to_\beta \\
+    & (\lambda y z)[y := \lambda y.z] = \\
+    & \lambda z.z \equiv \\
+    & I
+\end{align*}
+
+\end{document}
