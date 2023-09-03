@@ -5,3 +5,6 @@
 # Binaries
 bin
 obj
+
+# OS
+.DS_Store
