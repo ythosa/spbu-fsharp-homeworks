@@ -5,3 +5,15 @@
 # Binaries
 bin
 obj
+
+# Latex
+*.aux
+*.bbl
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.out
+
+# OS
+.DS_Store
