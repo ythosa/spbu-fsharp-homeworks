@@ -10,6 +10,10 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Homework1.Task4", "Homework
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Homework1.Task5", "Homework1.Task5\Homework1.Task5.fsproj", "{812CC2B5-E3E1-4F37-8E4A-31E3538D9F5A}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Homework5", "Homework5\Homework5.fsproj", "{8042750B-57BC-4921-9D4A-10C1E937A7EA}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Homework5.Tests", "Homework5.Tests\Homework5.Tests.fsproj", "{451D8CED-E2D5-427E-AC6C-D487A39788DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,13 @@ Global
 		{812CC2B5-E3E1-4F37-8E4A-31E3538D9F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{812CC2B5-E3E1-4F37-8E4A-31E3538D9F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{812CC2B5-E3E1-4F37-8E4A-31E3538D9F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8042750B-57BC-4921-9D4A-10C1E937A7EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8042750B-57BC-4921-9D4A-10C1E937A7EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8042750B-57BC-4921-9D4A-10C1E937A7EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8042750B-57BC-4921-9D4A-10C1E937A7EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{451D8CED-E2D5-427E-AC6C-D487A39788DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{451D8CED-E2D5-427E-AC6C-D487A39788DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{451D8CED-E2D5-427E-AC6C-D487A39788DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{451D8CED-E2D5-427E-AC6C-D487A39788DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
