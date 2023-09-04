@@ -8,6 +8,7 @@
     <ItemGroup>
         <Compile Include="map2ex.fs" />
         <Compile Include="foldBack.fs" />
+        <Compile Include="unionSeq.fs" />
     </ItemGroup>
 
 </Project>

@@ -29,7 +29,7 @@ let ``test left seq len is less`` () =
 
     let result = map2ex left right (*)
 
-    (fun () -> ignore <| List.ofSeq result) |> should throw typeof<Exception>
+    (fun () -> ignore <| List.ofSeq result) |> should throw typeof<SequencesMustHaveEqualLengthError>
 
 let ``test rights is infinite`` () =
     let left = seq { 0..10 }
@@ -37,7 +37,7 @@ let ``test rights is infinite`` () =
 
     let result = map2ex left right (*)
 
-    (fun () -> ignore <| List.ofSeq result) |> should throw typeof<Exception>
+    (fun () -> ignore <| List.ofSeq result) |> should throw typeof<SequencesMustHaveEqualLengthError>
 
 let ``test left is infiite`` () =
     let left = Seq.initInfinite id
@@ -45,7 +45,7 @@ let ``test left is infiite`` () =
 
     let result = map2ex left right (*)
 
-    (fun () -> ignore <| List.ofSeq result) |> should throw typeof<Exception>
+    (fun () -> ignore <| List.ofSeq result) |> should throw typeof<SequencesMustHaveEqualLengthError>
 
 [<Test>]
 let ``test right seq len is less`` () =
@@ -54,7 +54,7 @@ let ``test right seq len is less`` () =
 
     let result = map2ex left right (*)
 
-    (fun () -> ignore <| List.ofSeq result) |> should throw typeof<Exception>
+    (fun () -> ignore <| List.ofSeq result) |> should throw typeof<SequencesMustHaveEqualLengthError>
 
 [<Test>]
 let ``test seqs lengths are equals`` () =

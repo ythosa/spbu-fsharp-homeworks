@@ -9,5 +9,7 @@
     &lt;TestId&gt;NUnit3x::B507FF92-3E19-4BB8-A632-AA87E6517FB5::net7.0::Test.Tests.map2ex&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::B507FF92-3E19-4BB8-A632-AA87E6517FB5::net7.0::Test.Tests.foldBack.check foldback&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::B507FF92-3E19-4BB8-A632-AA87E6517FB5::net7.0::Test.Tests.foldBack.check fold back&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::B507FF92-3E19-4BB8-A632-AA87E6517FB5::net7.0::Test.Tests.unionSeq.union seq diff len&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::B507FF92-3E19-4BB8-A632-AA87E6517FB5::net7.0::Test.Tests.unionSeq&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
