@@ -1,4 +1,4 @@
-module Test.Tests
+module Test.Tests.map2ex
 
 open System
 open NUnit.Framework
@@ -26,6 +26,22 @@ let ``test infinite seqs`` () =
 let ``test left seq len is less`` () =
     let left = [ 1; 2 ] |> Seq.ofList
     let right = [ 4; 5; 6 ] |> Seq.ofList
+
+    let result = map2ex left right (*)
+
+    (fun () -> ignore <| List.ofSeq result) |> should throw typeof<Exception>
+
+let ``test rights is infinite`` () =
+    let left = seq { 0..10 }
+    let right = Seq.initInfinite id
+
+    let result = map2ex left right (*)
+
+    (fun () -> ignore <| List.ofSeq result) |> should throw typeof<Exception>
+
+let ``test left is infiite`` () =
+    let left = Seq.initInfinite id
+    let right = seq { 0..10 }
 
     let result = map2ex left right (*)
 

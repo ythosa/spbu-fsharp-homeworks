@@ -1,6 +1,13 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6f3d3ce2_002D6088_002D423f_002Db72b_002D71b46d5a0c47/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test simulation on weak" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6f3d3ce2_002D6088_002D423f_002Db72b_002D71b46d5a0c47/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test simulation on weak" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::B507FF92-3E19-4BB8-A632-AA87E6517FB5::net7.0::Test.Tests&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::B507FF92-3E19-4BB8-A632-AA87E6517FB5::net7.0::Test.Tests.foldBack&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c06ea008_002Df39e_002D4407_002D91c9_002D311c49a5b64c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="foldBack" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::B507FF92-3E19-4BB8-A632-AA87E6517FB5::net7.0::Test.Tests.map2ex&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::B507FF92-3E19-4BB8-A632-AA87E6517FB5::net7.0::Test.Tests.foldBack.check foldback&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::B507FF92-3E19-4BB8-A632-AA87E6517FB5::net7.0::Test.Tests.foldBack.check fold back&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
